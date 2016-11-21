@@ -1,0 +1,29 @@
+Travis Rebuilder
+
+Usage
+=====
+
+Use this script to trigger a rebuild of all of the repositories in a travis
+account.
+
+This is usefull in order to test if all the repositories are working correctly
+with latests upstream changes.
+
+In order to make this script work, you should be logged to travis.
+You can do this with the following command:
+
+    travis login
+
+Note: This commands require the travis-cli command installed. You can install
+it with:
+
+    gem install travis --no-rdoc --no-ri
+
+Once you have installed the dependencies you can run the command with:
+
+    rebuid_repositories.sh <username>
+
+Changing <username> with the username you want to rebuild the repos.
+
+Note the script will skip all the repositories which are currently build or
+have been build today.
